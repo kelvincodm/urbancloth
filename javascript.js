@@ -247,6 +247,7 @@ function allProducts() {
    document.getElementById("bottomsbox").style.display = "none";
    document.getElementById("accessoriesbox").style.display = "none";
    document.getElementById("sidemenu").style.display = "none";
+     document.body.style.overflow = "scroll";
 };
 
 function tops() {
@@ -401,3 +402,4 @@ function openSignBox() {
      document.getElementById("sidemenu").style.display = "none"; 
     document.body.style.overflow = "hidden";
 }
+
