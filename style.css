@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+}
+body {
+    background-color: black;
+    color: white;
+ 
+}
+.container {
+    display: flex;
+}
+.menu {
+    width: 20%;
+    border-right: 1px solid grey;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+.products ul {
+    margin-top: 3vh;
+     border-bottom: 1px solid grey;
+     padding-bottom: 40px;
+}
+.products ul li {
+    list-style-type: none;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+
+}
+.foot p {
+    font-size: 11px;
+}
+.products-box {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 80%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 37.5px;
+  border-bottom: 1px solid grey;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.content {
+    display: flex;
+
+}
+.allproductbox {
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax( 300px, 1fr));
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+.topbox {
+    gap: 10px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+.bottomsbox {
+  gap: 10px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    display: none;
+   align-items: center;
+   text-align: center;
+}
+.footwear {
+  
+    display: none;
+    width: 100%;
+    place-items: center;
+}
+
+.accessoriesbox {
+  gap: 10px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    display: none;
+}
+.content img {
+    width: 90%;
+    border-radius: 10px;
+}
+.content a {
+    text-decoration: none;
+    color: white;
+}
+.content p {
+    font-size: 12px;
+}
+.imgboxes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+.imgboxes img:hover {
+   transform: scale(1.23);
+    transition: 1s ease;
+}
+.cart {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+}
+.ua-beanie {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    margin-top: 8vh;
+}
+
+.ua-beanie svg{
+  color: white;
+  cursor: pointer;
+}
+.description {
+    line-height: 2;
+    padding: 10px;
+    font-size: 13px;
+}
+.nav-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+.nav-two {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+}
+svg {
+    cursor: pointer;
+}
+.sidemenu {
+    width: 300px;
+    background-color: black;
+    border-right: 1px solid grey;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+.signupbox {
+   background-color: black;
+   border: 2px solid white;
+   border-radius: 7px;
+   padding: 20px;
+   width: 500px;
+   line-height: 2;
+   display: none;
+}
+.signin {
+    width: 100%;
+     border-radius: 7px;
+    border: 2px solid white;
+    background-color: black;
+    padding: 10px;
+}
+.signup {
+     width: 100%;
+     border-radius: 7px;
+    border: 2px solid white;
+    background-color: black;
+    padding: 10px;
+    display: none;
+}
+input {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+    border-radius: 7px;
+}
+
+.size {
+    background-color: transparent;
+    color: white;
+    border: 1px solid grey;
+    outline: none;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 1s;
+}
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+}
+@media only screen and (max-width: 1110px) {
+    .menu {
+        display: none;
+    }
+    .products-box {
+        width: 100%;
+    }
+    nav {
+        display: none;
+    }
+    .nav-two {
+        display: flex;
+    }
+   
+    @media only screen and (max-width: 1022px) {
+ .ua-beanie {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .content {
+        margin-top: 15vh;
+    }
+    }
+
+}
+@media only screen and (max-width: 665px) {
+   .allproductbox, .accessoriesbox, .topbox, .bottomsbox {
+         grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    }
+}
